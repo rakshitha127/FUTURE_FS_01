@@ -13,7 +13,7 @@ export default function Contact() {
   try {
     console.log("Submitting form...");
 
-    const response = await fetch("https://future-fs-01-opal.vercel.app/api/send", {
+    const response = await fetch("/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,6 +33,9 @@ export default function Contact() {
 
     if (data.success) {
       alert("Email sent!");
+      setName("");
+      setEmail("");
+      setMessage("");
     } else {
       alert("Failed: " + data.error);
     }
