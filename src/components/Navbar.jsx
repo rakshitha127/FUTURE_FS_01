@@ -14,7 +14,7 @@ export default function Navbar() {
     "Contact",
   ];
 
-  const [active, setActive] = useState("hero");
+
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md">
