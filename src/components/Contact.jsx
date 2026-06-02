@@ -13,7 +13,7 @@ export default function Contact() {
   try {
     console.log("Submitting form...");
 
-    const response = await fetch("http://localhost:5000/send", {
+    const response = await fetch("https://future-fs-01-opal.vercel.app/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
