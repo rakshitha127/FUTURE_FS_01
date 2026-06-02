@@ -4,6 +4,8 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
    const handleSubmit = async (e) => {
   e.preventDefault();
@@ -12,7 +14,7 @@ export default function Contact() {
 
   try {
     console.log("Submitting form...");
-
+    setLoading(true);
     const response = await fetch("/api/send", {
       method: "POST",
       headers: {
@@ -36,12 +38,15 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setStatus("Message sent successfully!");
     } else {
       alert("Failed: " + data.error);
+      setLoading(false);
     }
   } catch (error) {
     console.error(error);
     alert("Fetch Error: " + error.message);
+    setLoading(false);
   }
 };
 
@@ -81,12 +86,18 @@ export default function Contact() {
             onChange={(e) => setMessage(e.target.value)}
             className="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500 resize-none"
           />
+          {status && (
+              <p className="text-green-400">
+                 {status}
+              </p>
+           )}
 
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium"
-          >
-            Send Message
+            disabled={loading}
+            className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium">   
+            
+              {loading ? "Sending..." : "Send Message"}
           </button>
 
         </form>
