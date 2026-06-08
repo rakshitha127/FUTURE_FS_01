@@ -64,7 +64,7 @@ export default function Hero() {
           </a>
 
           <a
-           href="/Rakshitha_Resume.pdf"
+           href="/Mamidi_Rakshitha_Resume.pdf"
            download
            className="px-6 py-3 bg-cyan-500 rounded-xl font-medium hover:bg-cyan-600 transition"
            >
