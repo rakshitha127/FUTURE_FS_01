@@ -60,7 +60,7 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-5 bg-slate-900/60 border border-slate-800 p-8 rounded-2xl shadow-lg"
+          className="space-y-5 bg-slate-900/60 border border-gray-300 dark:border-slate-800 p-8 rounded-2xl shadow-lg"
         >
 
           <input
@@ -68,7 +68,7 @@ export default function Contact() {
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500"
           />
 
           <input
@@ -76,7 +76,7 @@ export default function Contact() {
             placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500"
           />
 
           <textarea
@@ -84,7 +84,7 @@ export default function Contact() {
             rows="5"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500 resize-none"
+            className="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-950 border border-slate-800 focus:outline-none focus:border-blue-500 resize-none"
           />
           {status && (
               <p className="text-green-400">

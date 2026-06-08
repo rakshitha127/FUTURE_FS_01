@@ -8,12 +8,13 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { useState, useEffect } from "react";
 
 function App() {
   return (
-    <div className="bg-slate-950 text-white">
+    <div className="min-h-screen bg-slate-950 text-white">
       <Background />
-      <Navbar />
+      <Navbar  />
       <Hero />
       <Stats />
       <About />

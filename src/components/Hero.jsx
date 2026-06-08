@@ -4,7 +4,7 @@ import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
+    <section className="min-h-[90vh] flex items-center justify-center px-6">
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -17,7 +17,7 @@ export default function Hero() {
           👋 Hello, I'm
         </p>
 
-        <h1 className="text-6xl md:text-8xl font-bold mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
           Mamidi Rakshitha
         </h1>
 
@@ -63,6 +63,14 @@ export default function Hero() {
             Contact Me
           </a>
 
+          <a
+           href="/Rakshitha_Resume.pdf"
+           download
+           className="px-6 py-3 bg-cyan-500 rounded-xl font-medium hover:bg-cyan-600 transition"
+           >
+          Download Resume
+          </a>
+
         </div>
 
         <div className="flex justify-center gap-6 mt-10 text-2xl">
@@ -76,12 +84,16 @@ export default function Hero() {
             <FaLinkedin />
           </a>
 
+         
+
           <a
             href="mailto:rakshithaa1211@gmail.com"
             className="hover:text-cyan-400"
           >
             <FaEnvelope />
           </a>
+
+           
 
         </div>
 

@@ -2,10 +2,16 @@ import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 
 const projects = [
-  {
-    title: "Explore • Capture • Connect",
+    {
+    title: "Personal Portfolio Website",
     description:
-      "A Full Stack travel platform providing information about destinations across India.",
+      "A responsive portfolio website built using React, Tailwind CSS, Vercel, and Resend API with a functional contact form.",
+    tech: ["React", "Tailwind CSS", "Vercel", "Resend"],
+  },
+   {
+    title: "Client Lead Management System (Mini CRM)",
+    description:
+      "A lead management application for tracking clients, managing interactions, and organizing sales leads efficiently.",
     tech: ["React", "Node.js", "MySQL"],
   },
   {
@@ -32,7 +38,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition"
+              className="bg-gray-100 dark:bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-cyan-400 transition"
             >
               <h3 className="text-xl font-bold text-cyan-400">
                 {project.title}
@@ -46,7 +52,7 @@ export default function Projects() {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-slate-800 px-3 py-1 rounded-full text-sm"
+                    className="border-gray-300 dark:border-slate-800 px-3 py-1 rounded-full text-sm"
                   >
                     {tech}
                   </span>
